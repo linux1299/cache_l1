@@ -1,7 +1,7 @@
 /*****************************************************************************
 Description:
 Testbench for L1 Cache
-Author: Li Cangyuan
+Author: Lin Youxu
 *****************************************************************************/
 //`include "cache_l1_define.v"
 `timescale 1ns/10ps
