@@ -13,9 +13,9 @@ module mem_dat ( 	rst, clk,
 					data_in,
 					data_out,
 					way_index);
-parameter DATA_WDT = 64;
+parameter DATA_WDT  = 64;
 parameter LINE_SIZE = 512 / DATA_WDT;
-parameter SET = `NUM_SET;	//cache set number
+parameter SET       = `NUM_SET;	//cache set number
 												
 /*------------------------------------------------------------------------
 				Ports
