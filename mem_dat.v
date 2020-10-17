@@ -36,7 +36,7 @@ wire 	[DATA_WDT*8-1 : 0]			data_out_3;
 wire 	[DATA_WDT*8-1 : 0]			data_out_4;
 wire 	[DATA_WDT*8-1 : 0]			data_out_5;
 wire 	[DATA_WDT*8-1 : 0]			data_out_6;
-wire 	[DATA_WDT*8-1 : 0]			data_out_7;
+wire 	[DATA_WDT*8-1 : 0]			data_out_7；
 
 reg 	[2 : 0]						way_index_reg;
 reg 	[31 : 0]					addr_reg;
@@ -44,7 +44,7 @@ reg 	[31 : 0]					addr_reg;
 always @(posedge clk or negedge rst) begin
 	if(~rst) begin
 		way_index_reg <= 0;
-		addr_reg <= 0;
+		addr_reg      <= 0;
 	end
 	else begin
 		way_index_reg <= way_index;
@@ -56,15 +56,15 @@ always @(*) begin
 	if(DATA_WDT == 64) begin
 		case (addr_reg[9:7])
 			3'b000  : case (way_index_reg)
-						3'd0 : data_out = data_out_0[63:0];
-						3'd1 : data_out = data_out_0[127:64];
-						3'd2 : data_out = data_out_0[191:128];
-						3'd3 : data_out = data_out_0[255:192];
-						3'd4 : data_out = data_out_0[319:256];
-						3'd5 : data_out = data_out_0[383:320];
-						3'd6 : data_out = data_out_0[447:384];
-						3'd7 : data_out = data_out_0[511:448];
-					 default : data_out = data_out_0[63:0];
+						3'd0 : data_out  = data_out_0[63:0];
+						3'd1 : data_out  = data_out_0[127:64];
+						3'd2 : data_out  = data_out_0[191:128];
+						3'd3 : data_out  = data_out_0[255:192];
+						3'd4 : data_out  = data_out_0[319:256];
+						3'd5 : data_out  = data_out_0[383:320];
+						3'd6 : data_out  = data_out_0[447:384];
+						3'd7 : data_out  = data_out_0[511:448];
+					 default : data_out  = data_out_0[63:0];
 					endcase
 			3'b001  : case (way_index_reg)
 						3'd0 : data_out = data_out_1[63:0];
